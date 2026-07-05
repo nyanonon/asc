@@ -20,11 +20,13 @@ http://hp.vector.co.jp/authors/VA028184/
 
 GAMEEXE.INI及びSEEN.TXTを分割したファイル、aic.exe、asc.exeを同じフォルダに用意して、下記のように実行するとNScripter用シナリオデータが0.txtとして出力されます。
 
+```
 aic > 0.txt
 asc SEEN001.TXT >> 0.txt
 asc SEEN002.TXT >> 0.txt
           :
 asc SEEN999.TXT >> 0.txt
+```
 
 SEEN.TXTを分割したファイル（SEEN001.TXT、SEEN002.TXT…SEEN999.TXT）は変換したいものだけを任意に指定してもかまいません。
 
@@ -51,16 +53,18 @@ http://homepage3.nifty.com/hiro-inoue/soft_spi0.html#SOFT_SPIKNN
 変換できないAVG32の命令や変換が不完全な命令は「;」で始まるコメントとして、16進数や文字列のデータが出力されます。
 テキストに含まれる＊ＡＢなどは、GAMEEXE.INIの#NAME.ABなどを元に置き換えるべきですが、今回は何も行っていません。
 
-・NScripter について
+### NScripter について
 
 C言語などでお馴染みの Hello World. は下記のようにテキストファイル 0.txt を作成して、同じフォルダに配置した nscr.exe を実行するだけで表示されます。
 
+```
 *define
 game
 
 *start
 ハローワールド\
 end
+```
 
 *define と続く game は必須。game で *start に飛ぶので、*start も必須。end で NScripter を自動的に終了させられる。
 ハローワールドの末尾の「\」は、いわゆるクリック待ち。続く表示で改ページさせたくない場合は「@」を使う。空行は「br」を記述。
